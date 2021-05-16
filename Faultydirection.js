@@ -1,36 +1,29 @@
 function runProgram(input) {
-  var input = input.trim().split(/[\n\r]+/);
-  //   console.log(input);
-
-  tests = Number(input[0]);
-  //   console.log(tests);
-
-  for (var i = 0, line = 1; i < tests; i++) {
-    var num = Number(input[line++]);
-    var elem = input[line++].trim();
-
-    // console.log(num, elem);
-
-    var L = 0;
+  input = input.trim().split(/[\n\r]+/);
+  // console.log(input);
+  var tests = Number(input[0]);
+  for (var i = 0, Line = 1; i < tests; i++) {
+    var num = Number(input[Line++]);
+    var elem = input[Line++].trim();
+    //console.log(N, elem);
     var R = 0;
+    var L = 0;
     var U = 0;
     var D = 0;
-
-    for (var j = 0; i < num; j++) {
-      if (elem[j] == "L") {
-        L -= 1;
-      }
+    for (var j = 0; j < num; j++) {
       if (elem[j] == "R") {
         R += 1;
       }
       if (elem[j] == "U") {
         U += 1;
       }
+      if (elem[j] == "L") {
+        L -= 1;
+      }
       if (elem[j] == "D") {
         D -= 1;
       }
     }
-
     if (L + R == 0 && U + D == 0) {
       console.log("Yes");
     } else {
@@ -38,7 +31,6 @@ function runProgram(input) {
     }
   }
 }
-
 if (process.env.USERNAME === "prasa") {
   runProgram(`2
 5
