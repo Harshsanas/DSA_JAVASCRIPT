@@ -1,29 +1,24 @@
 function runProgram(input) {
-  var input = input.trim().split(/[\n\r]+/);
+  input = input.trim().split(/[\n\r]+/);
   // console.log(input);
-
   var tests = Number(input[0]);
   // console.log(tests);
-
   for (var i = 0, line = 1; i < tests; i++) {
-    let str_array = input[line++].trim();
-    // console.log(str_array);
-
+    var elem = input[line++].trim();
+    //console.log(elem);
+    var sum = 0;
     var count = 1;
-    var total = 0;
-
-    for (var j = 0; j < str_array - 1; j++) {
-      if (str_array[j] === str_array[j + 1]) {
+    for (var j = 0; j < elem.length - 1; j++) {
+      if (elem[j] === elem[j + 1]) {
         count++;
       } else {
         count = 1;
       }
-      total = Math.max(total, count);
+      sum = Math.max(sum, count);
     }
-    console.log(total);
+    console.log(sum);
   }
 }
-
 if (process.env.USERNAME === "prasa") {
   runProgram(`4
 aaaaaa
