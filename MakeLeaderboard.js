@@ -1,26 +1,5 @@
 function runProgram(input) {
   var input = input.trim().split(/[\n\r]+/);
-  var [num, sum] = input[0].trim().split(" ").map(Number);
-  var elem = input[1].trim();
-  var count = 0;
-
-  function Distinct(substring, k) {
-    for (var i = 0; i < k; i++) {
-      for (var j = i + 1; j < sum; j++) {
-        if (substring[i] == substring[j]) {
-          return 0;
-        }
-      }
-    }
-    return 1;
-  }
-  for (var i = 0; i < num - sum; i++) {
-    var substring = elem.slice(i, i + sum);
-    if (Distinct(substring, sum)) {
-      count++;
-    }
-  }
-  console.log(count);
 }
 
 if (process.env.USERNAME === "prasa") {
