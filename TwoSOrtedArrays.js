@@ -17,13 +17,13 @@ function runProgram(input) {
       object1[key] === undefined ? (object1[key] = 1) : object1[key]++;
     }
 
-    console.log(object1[key]);
+    // console.log(object1[key]);
     for (key of array2) {
       object2[key] === undefined ? (object2[key] = 1) : object2[key]++;
     }
 
-    console.log(object2[key]);
-    console.log(object1, object2);
+    // console.log(object2[key]);
+    // console.log(object1, object2);
 
     for (key in object1) {
       if (key in object2) {
