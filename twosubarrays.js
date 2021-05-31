@@ -1,35 +1,35 @@
 function runProgram(input) {
   input = input.trim().split(/[\n\r]+/);
   var tests = +input[0];
-  for (var x = 0, line = 1; x < tests; x++) {
-    var N = Number(input[line++]);
-    var elem = input[line++].trim().split(" ").map(Number);
-    //console.log(N, elem);
+  for (var z = 0, line = 1; z < tests; z++) {
+    var N = +input[line++];
+    var elem = input[line++].trim();
     var i = 0;
     var j = 0;
-    var max = 0;
-    var set = new Set();
+    var length = 0;
+    var count = 0;
+    var obj = {};
     while (j < N) {
-      if (!set.has(elem[j])) {
-        set.add(elem[j]); // add distrinct element
+      if (!obj[elem[j]] || obj[elem[j]] < 2) {
+        obj[elem[j]] = obj[elem[j]] ? obj[elem[j]] + 1 : 1;
+        length = Object.values(obj).reduce((a, b) => a + b);
         j++;
-        max = Math.max(set.size, max);
+        count += length;
       } else {
-        set.delete(elem[i]); // remove repeating element
+        obj[elem[i]]--;
+        if (obj[elem[i]] == 0) {
+          delete obj[elem[i]];
+        }
         i++;
       }
     }
-    console.log(max);
+    console.log(count);
   }
 }
 if (process.env.USERNAME === "prasa") {
-  runProgram(`3
-8
-1 2 1 3 2 7 4 2
+  runProgram(`1
 5
-1 2 1 3 4
-4
-1 2 2 1`);
+aabba`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
