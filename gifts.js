@@ -4,7 +4,7 @@ function runProgram(input) {
   for (var x = 0, line = 1; x < tests; x++) {
     var N = Number(input[line++]);
     var elem = input[line++].trim().split(" ").map(Number);
-    //console.log(N, elem);
+    // console.log(N, elem);
     var i = 0;
     var j = 0;
     var max = 0;
