@@ -27,7 +27,7 @@ function runProgram(input) {
     console.log("False");
   }
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`masai school a transformation
 trasnformation school a masai`);
 } else {

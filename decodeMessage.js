@@ -18,7 +18,7 @@ function runProgram(input) {
   console.log(maincount);
 }
 
-if (process.env.USERNAME === "") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`ATTCGGGA`);
 }
 process.stdin.resume();

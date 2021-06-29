@@ -6,7 +6,7 @@ function runProgram(input) {
   console.log(area);
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`4`);
 } else {
   process.stdin.resume();

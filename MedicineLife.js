@@ -33,7 +33,7 @@ const isMedicine = (N, K, elements) => {
   console.log("Impossible");
 };
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`2
 5 7
 1 2 3 4 5

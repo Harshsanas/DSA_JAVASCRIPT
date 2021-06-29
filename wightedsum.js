@@ -21,7 +21,7 @@ function Sum(array_elem) {
   return sum;
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`2
 5
 1 2 3 4 5

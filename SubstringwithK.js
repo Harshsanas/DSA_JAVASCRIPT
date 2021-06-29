@@ -23,7 +23,7 @@ function runProgram(input) {
   console.log(count);
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`4 2
 abcc`);
 } else {

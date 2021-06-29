@@ -43,7 +43,7 @@ function runProgram(input) {
     console.log(stack.length == 0 ? "balanced" : "not balanced");
   }
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`3
 {([])}
 ()

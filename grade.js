@@ -13,7 +13,7 @@ function runProgram(input) {
     console.log("F");
   }
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`80`);
 } else {
   process.stdin.resume();

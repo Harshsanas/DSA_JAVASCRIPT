@@ -26,7 +26,7 @@ function findOdd(array) {
     return "No";
   }
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`3
 1
 1

@@ -34,7 +34,7 @@ const isPalindrome = (e) => {
   console.log("yes");
 };
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`6
 abcdcfa`);
 } else {

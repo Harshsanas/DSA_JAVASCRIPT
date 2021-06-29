@@ -21,7 +21,7 @@ function pattern(mat, rows, cols, ans) {
   console.log(ans.join(""));
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`5 4
 0 0 0 0
 1 1 1 1

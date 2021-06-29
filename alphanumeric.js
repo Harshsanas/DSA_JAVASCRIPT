@@ -28,7 +28,7 @@ function runProgram(input) {
     console.log(total);
   }
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`2
 5
 a123b

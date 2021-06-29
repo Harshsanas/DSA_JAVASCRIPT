@@ -36,7 +36,7 @@ function runProgram(input) {
 }
 //
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`zoomsessionmooz`);
 } else {
   process.stdin.resume();

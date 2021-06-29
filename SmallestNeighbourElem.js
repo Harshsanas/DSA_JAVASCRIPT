@@ -29,7 +29,7 @@ function runProgram(input) {
   }
   console.log(total);
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`8
 39 27 11 4 24 32 32 1`);
 } else {

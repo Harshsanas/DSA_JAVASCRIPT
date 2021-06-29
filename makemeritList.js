@@ -40,7 +40,7 @@ function runProgram(input) {
   console.log(data);
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`10
 jack 158 85 112
 john 168 74 124

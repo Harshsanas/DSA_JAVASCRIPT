@@ -40,7 +40,7 @@ function runProgram(input) {
   console.log(temp);
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`aba`);
 } else {
   process.stdin.resume();

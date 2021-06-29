@@ -23,7 +23,7 @@ function runProgram(input) {
   console.log(day);
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`Wednesday
 8`);
 } else {

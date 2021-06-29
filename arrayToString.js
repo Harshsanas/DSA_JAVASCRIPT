@@ -16,7 +16,7 @@ function runProgram(input) {
   console.log(str);
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`5
 2 -4 6 8 -9`);
 } else {

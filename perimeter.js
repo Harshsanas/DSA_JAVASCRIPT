@@ -9,7 +9,7 @@ function runProgram(input) {
   console.log(perimeter);
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`3 6`);
 } else {
   process.stdin.resume();

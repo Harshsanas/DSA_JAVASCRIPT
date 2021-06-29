@@ -2,7 +2,7 @@ function runProgram(input) {
   var input = input.trim().split("\n");
   console.log(input);
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`4 2
 abcc`);
 } else {

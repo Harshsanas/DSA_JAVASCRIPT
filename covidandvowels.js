@@ -37,7 +37,7 @@ function runProgram(input) {
   console.log(count);
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`dangerouscovid`);
 } else {
   process.stdin.resume();

@@ -15,7 +15,7 @@ function runProgram(input) {
     console.log(key, obj[key]);
   }
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`
     3
     masai

@@ -22,7 +22,7 @@ function runProgram(input) {
     console.log(max);
   }
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`3
 8
 1 2 1 3 2 7 4 2

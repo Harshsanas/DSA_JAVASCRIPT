@@ -20,7 +20,7 @@ function runProgram(input) {
   }
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`4
 1 2 3 4
 5 6 7 8

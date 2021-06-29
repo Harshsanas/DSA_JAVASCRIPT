@@ -33,7 +33,7 @@ function runProgram(input) {
     console.log("Tie");
   }
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`
   x x o
   o x x

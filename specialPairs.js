@@ -32,7 +32,7 @@ function runProgram(input) {
   console.log(sum);
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`6
 1 2 3 5 7 12`);
 } else {

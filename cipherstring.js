@@ -23,7 +23,7 @@ function runProgram(input) {
   console.log(output);
 }
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`2
 5   
 aabcc

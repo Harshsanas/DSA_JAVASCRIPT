@@ -37,7 +37,7 @@ function runProgram(input) {
   }
   console.log(count);
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`
   3 3 6
   3 2 1

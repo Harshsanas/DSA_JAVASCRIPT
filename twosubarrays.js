@@ -1,5 +1,6 @@
 function runProgram(input) {
   input = input.trim().split(/[\n\r]+/);
+  console.log(input);
   var tests = +input[0];
   for (var z = 0, line = 1; z < tests; z++) {
     var N = +input[line++];
@@ -26,7 +27,7 @@ function runProgram(input) {
     console.log(count);
   }
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`1
 5
 aabba`);

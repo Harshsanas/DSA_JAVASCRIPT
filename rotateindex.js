@@ -12,7 +12,7 @@ function rotate(arr, d) {
   }
   return arr;
 }
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`5 4
 1 2 3 4 5`);
 } else {

@@ -32,7 +32,7 @@ function runProgram(input) {
 }
 //
 
-if (process.env.USERNAME === "prasa") {
+if (process.env.USERNAME === "lenovo") {
   runProgram(`2
 7
 100 80 60 70 60 75 85
