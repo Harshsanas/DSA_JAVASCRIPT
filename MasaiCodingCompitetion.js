@@ -1,11 +1,10 @@
 function runProgram(input) {
   input = input.split(/[\r\n]+/);
   var elem = input.map((e) => e.split(" "));
-  //console.log(elem);
+  console.log(elem);
 
   var arr = elem.slice(1, elem.length);
-
-  //console.log(arr);
+  console.log(arr);
 
   var queCol = [];
   var queRow = [];
@@ -17,6 +16,7 @@ function runProgram(input) {
         queCol.push(arr[i][1]);
         queRow.push(arr[i][2]);
         obj[arr[i][1]] = 1;
+
       } else {
         var lastElem = queCol.length - 1;
         while (queCol[lastElem] != arr[i][1] && queCol.includes(arr[i][1])) {
