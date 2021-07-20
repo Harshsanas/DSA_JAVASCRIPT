@@ -1,23 +1,24 @@
 function runProgram(input) {
   var input = input.trim().split(/[\r\n]+/);
-  //   console.log(input);
+//   console.log(input);
   var tests = +input[0];
-  //   console.log(tests);
+//   console.log(tests);
 
-  for (var i = 0, line = 1; i < tests; i++) {
-    var num = +input[line++];
-    var elem = input[line++].trim().split(" ").map(Number);
+  for(var i=0,line=1;i<tests;i++){
+      var num=+input[line++]
+      var elem = input[line++].trim().split(" ").map(Number);  
 
-    console.log(recursionSum(elem, num));
 
-    function recursionSum(elem, num) {
-      if (num == 1) {
-        return 0;
-      } else {
-        return (
-          Math.abs(elem[num - 1] - elem[num - 2]) + recursionSum(elem, num - 1)
-        );
-      }
+      console.log(recursionSum(elem, num));
+
+    function recursionSum(elem,num){
+        if (num == 1) {
+          return 0;
+        } else {
+          return Math.abs(
+            elem[num - 1] - elem[num - 2]) + recursionSum(elem, num - 1)
+          ;
+        }
     }
   }
 }

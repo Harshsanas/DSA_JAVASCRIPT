@@ -1,25 +1,29 @@
 function runProgram(input) {
-  input = input.trim().split(/[\n\r]+/);
-  let num = +input[0];
-  let elem = input[1].trim().split("");
-  //console.log(elem, num);
-  let stack = [];
-  for (let i = 0; i < num; i++) {
-    if (stack.length != 0 && stack[stack.length - 1] == elem[i]) {
-      stack.pop();
-    } else {
-      stack.push(elem[i]);
-    }
-  }
-  if (stack.length != 0) {
-    console.log(stack.join(""));
-  } else {
-    console.log(-1);
-  }
+  var input = input.trim().split(/[\r\n]+/);
+    // console.log(input);
+
+    var test=+input[0]
+    console.log(test)
+
+    var elem=input[1].trim().split(" ").map(Number)
+    console.log(elem)
 }
+
+// function mergeSort(elem,low,high){
+//   if(low>high){
+//     arr=partition
+//   }
+
+// }
+
+function Merging(elem,high,low){
+  
+}
+
+
 if (process.env.USERNAME === "lenovo") {
   runProgram(`5
-aabbc`);
+3 5 0 9 8`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");

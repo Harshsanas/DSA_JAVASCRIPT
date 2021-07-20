@@ -1,25 +1,23 @@
 function runProgram(input) {
-  input = input.trim().split(/[\n\r]+/);
-  let num = +input[0];
-  let elem = input[1].trim().split("");
-  //console.log(elem, num);
-  let stack = [];
-  for (let i = 0; i < num; i++) {
-    if (stack.length != 0 && stack[stack.length - 1] == elem[i]) {
-      stack.pop();
-    } else {
-      stack.push(elem[i]);
-    }
-  }
-  if (stack.length != 0) {
-    console.log(stack.join(""));
-  } else {
-    console.log(-1);
-  }
+  var input = input.trim().split(/[\r\n]+/).map(Number);
+    // console.log(input);
+    
+    console.log(BobBoxex(input));
+
 }
+function BobBoxex(n) {
+    if (n < 0) {
+        return 0;
+    }
+    if (n == 0) {
+        return 1;
+    } else {
+        return BobBoxex(n - 1) + BobBoxex(n - 3) + BobBoxex(n - 5); // 6+4+2
+    }
+}
+
 if (process.env.USERNAME === "lenovo") {
-  runProgram(`5
-aabbc`);
+  runProgram(`7`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");

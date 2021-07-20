@@ -1,25 +1,20 @@
 function runProgram(input) {
   input = input.trim().split(/[\n\r]+/);
-  let num = +input[0];
-  let elem = input[1].trim().split("");
-  //console.log(elem, num);
-  let stack = [];
-  for (let i = 0; i < num; i++) {
-    if (stack.length != 0 && stack[stack.length - 1] == elem[i]) {
-      stack.pop();
-    } else {
-      stack.push(elem[i]);
+  let [N, K] = input[0].trim().split(" ").map(Number);
+  let elem = input[1].trim().split(" ").map(Number);
+  //console.log(elem, N, K);
+  let minScore = elem[K - 1];
+  let count = 0;
+  for (let i = 0; i < N; i++) {
+    if (elem[i] >= minScore) {
+      count++;
     }
   }
-  if (stack.length != 0) {
-    console.log(stack.join(""));
-  } else {
-    console.log(-1);
-  }
+  minScore == 0 ? console.log(0) : console.log(count);
 }
 if (process.env.USERNAME === "lenovo") {
-  runProgram(`5
-aabbc`);
+  runProgram(`8 5
+10 9 8 7 7 7 5 5`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
