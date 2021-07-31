@@ -1,28 +1,28 @@
 function runProgram(input) {
   var input = input.trim().split(/[\r\n]+/);
-  // console.log(input);
-  var elem = Number(input[0]);
-  // console.log(elem);
-  var total = 0;
-  var nums = input[1].trim().split(" ").map(Number);
-  // console.log(nums);
+//   console.log(input);
 
-  var array = [];
-  for (var i = 0; i < nums.length; i++) {
-    var index = i + 1;
-    // console.log(index);
-    var num = index * nums[i];
-    array.push(num);
+  var test=+input[0]
+//   console.log(test)
+
+  for(var i=0,line=1;i<test;i++){
+      var num=+input[line++].trim();
+      var elem=input[line++].trim().split(" ").map(Number)
+      console.log(num,elem)
+
+      
   }
-  // console.log(array);
-  for (var j = 0; j < array.length; j++) {
-    total = total + array[j];
-  }
-  console.log(total);
 }
+
+
 if (process.env.USERNAME === "lenovo") {
-  runProgram(`5
-0 1 1 1 1`);
+  runProgram(`3
+3
+1 2 3
+6
+1 2 3 1 2 3
+6
+1 1 1 1 1 1`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
