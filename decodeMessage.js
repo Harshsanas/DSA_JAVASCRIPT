@@ -1,13 +1,13 @@
 function runProgram(input) {
   var input = input.trim().split("");
-  //  console.log(input);
-
+   console.log(input);
   var count = 1;
   var maincount = 1;
 
   for (var i = 0; i < input.length - 1; i++) {
     if (input[i] == input[i + 1]) {
       count++;
+      console.log(count)
     } else {
       count = 1;
     }
