@@ -1,32 +1,26 @@
 function runProgram(input) {
   var input = input.trim().split(/[\r\n]+/);
-    // console.log(input);
+//   console.log(input);
 
-    var tests=+input[0]
+  var num=+input[0]
+  var elem=input[1].trim().split(" ").map(Number)
 
-    for(var i=0,line=1;i<tests;i++){
+//   console.log(num,elem)
 
-        var container=Number(input[line++])
+  var count=0
 
-        console.log(Profit(container,0))
-
-    }
-    
-function Profit(container,n) {
-  if (container === n) {
-    return 1;
-  } else if (n > container) { 
-    return 0;
-  } else {
-    return Profit(container, n + 4) + Profit(container, n + 8);
+  for(var i=0;i<num;i++){
+      if(elem[i]!=elem[i+1]){
+          count=count+elem[i]
+      }
   }
-}
-}
+  console.log(count)
 
+}
 
 if (process.env.USERNAME === "lenovo") {
-  runProgram(`1
-12`);
+  runProgram(`5
+2 2 2 1 1`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
