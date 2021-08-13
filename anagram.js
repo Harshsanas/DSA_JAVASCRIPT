@@ -1,6 +1,6 @@
 function runProgram(input) {
   var input = input.trim().split("\n");
-  // console.log(input);
+  console.log(input);
   var string = input[0].trim();
 
   var sort_A = "";
@@ -12,7 +12,7 @@ function runProgram(input) {
 
   sort_A = sortAlp(string);
 
-  // console.log(sort_A);
+  console.log(sort_A);
 
   var substring = input[1].trim().split(" ");
   substring = substring.join("");
@@ -20,7 +20,7 @@ function runProgram(input) {
     return elem.split("").sort().join("");
   };
   sort_B = sorting(substring);
-  // console.log(sort_B);
+  console.log(sort_B);
   if (sort_A == sort_B) {
     console.log("True");
   } else {

@@ -1,40 +1,38 @@
 function runProgram(input) {
-  var input = input.trim();
-  // console.log(input);
-
+  input = input.trim().split(/[\n\r]+/);
+  //console.log(input);
+  var str = input[0].trim();
+  //console.log(str);
+  console.log(covidVowel(str));
+}
+function covidVowel(str) {
   var count = 0;
-
-  for (var i = 0; i < input.length; i++) {
-    var string = "";
-
-    for (var j = i; j < input.length; j++) {
-      string = string + input[j];
-
-      // console.log(string);
-
-      var a = false;
-      var i = false;
-      var o = false;
-      var u = false;
-
-      for (var k = 0; k < string.length; k++) {
-        string[k] == "a"
-          ? (a = true)
-          : string[k] == "i"
-          ? (i = true)
-          : string[k] == "o"
-          ? (o = true)
-          : string[k] == "u"
-          ? (u = true)
+  for (var i = 0; i < str.length; i++) {
+    var subStr = "";
+    for (var j = i; j < str.length; j++) {
+      subStr += str[j];
+      //console.log(subStr);
+      var vowel_a = false;
+      var vowel_i = false;
+      var vowel_o = false;
+      var vowel_u = false;
+      for (var k = 0; k < subStr.length; k++) {
+        subStr[k] == "a"
+          ? (vowel_a = true)
+          : subStr[k] == "i"
+          ? (vowel_i = true)
+          : subStr[k] == "o"
+          ? (vowel_o = true)
+          : subStr[k] == "u"
+          ? (vowel_u = true)
           : false;
       }
-
-      if (a == true && i == true && o == true && u == true) {
-        count = count + 1;
-      }
+      if (vowel_a && vowel_i && vowel_o && vowel_u) {
+        count++
+      };
     }
   }
-  console.log(count);
+  return count;
 }
 
 if (process.env.USERNAME === "lenovo") {
