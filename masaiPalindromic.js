@@ -1,6 +1,6 @@
 function runProgram(input) {
   var input = input.trim();
-  // console.log(input);
+  console.log(input);
   var array = [];
   for (var i = 0; i < input.length; i++) {
     var strings = "";
@@ -9,8 +9,8 @@ function runProgram(input) {
       array.push(strings);
     }
   }
-  // console.log(array);
-  //   console.log(strings);
+  console.log(array);
+    console.log(strings);
 
   function palindrome(string) {
     var string2 = "";
@@ -26,7 +26,7 @@ function runProgram(input) {
 
   var count = 0;
   for (var i = 0; i < array.length; i++) {
-    // console.log(array[i]);
+    console.log(array[i]);
     if (palindrome(array[i])) {
       if (array[i].length > count) {
         count = array[i].length;

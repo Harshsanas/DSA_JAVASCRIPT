@@ -12,9 +12,18 @@ function runProgram(input) {
         console.log(num,elem);
         var output=[]
         var stack=[]
+        output[0]=-1
 
-        stack.push(elem.length-1)
+        stack.push(elem[elem.length-1])
         console.log(stack)
+
+        for(var j=num.length - 1; j >= 0; j--){
+          while(stack.length !== 0 && stack[stack.length - 1]<=elem[j]){
+            stack.pop()
+          }
+          
+        }
+        console.log(output.join(" "))
     }
 }
 if (process.env.USERNAME === "lenovo") {

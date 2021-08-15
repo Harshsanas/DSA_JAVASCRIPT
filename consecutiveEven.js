@@ -4,7 +4,7 @@ function runProgram(input) {
 
   var array = [];
   var num1 = Number(input[0]);
-  //   console.log(array, num1);
+    console.log(num1);
 
   even = false;
 
@@ -12,16 +12,15 @@ function runProgram(input) {
     var temp = input[i].trim().split(" ").map(Number);
     array.push(temp);
   }
-  //   console.log(array);
+    console.log(array);
 
   for (var i = 0; i < array.length; i++) {
-    for (var j = 0; j <= array[i].length - 3; j++) {
-      //   console.log(array[i][j]);
+        console.log(array[i]);
 
       if (
-        array[i][j] % 2 == 0 &&
-        array[i][j + 1] % 2 == 0 &&
-        array[i][j + 2] == 0
+        array[i] % 2 == 0 &&
+        array[i + 1] % 2 == 0 &&
+        array[i + 2] == 0
       ) {
         even = true;
       }
@@ -30,7 +29,7 @@ function runProgram(input) {
       console.log("Yes");
     } else {
       console.log("No");
-    }
+    
   }
 }
 
