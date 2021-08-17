@@ -1,26 +1,36 @@
 function runProgram(input) {
   input = input.trim().split(/[\n\r]+/);
-  let num = +input[0];
-  let elem = input[1].trim().split("");
-  //console.log(elem, num);
-  let stack = [];
-  for (let i = 0; i < num; i++) {
-    if (stack.length != 0 && stack[stack.length - 1] == elem[i]) {
-      stack.pop();
-    } else {
-      stack.push(elem[i]);
+//   console.log(input)
+
+  var test=+input[0]
+
+
+  var array=[]
+  for(var k=0,line=1; k<test; k++) {
+      var num=+input[line++]
+      var str=input[line++].trim();
+    //   console.log(num,str)
+
+      for(var i=0;i<str.length;i++) {
+          var strings=""
+          for (var j = i; j < str.length; j++) {
+            strings = strings + str[j];
+            array.push(strings);
+          }
+      }
+
+    //   console.log(array)
+    for(var l=0;l<array.length;l++){
+        console.log(array[l])
     }
-  }
-  // console.log(stack)
-  if (stack.length != 0) {
-    console.log(stack.join(""));
-  } else {
-    console.log(-1);
-  }
+    }
 }
+
+  
 if (process.env.USERNAME === "lenovo") {
-  runProgram(`5
-aabbc`);
+  runProgram(`1
+4 
+aman`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");

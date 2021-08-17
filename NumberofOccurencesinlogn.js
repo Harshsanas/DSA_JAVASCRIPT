@@ -1,26 +1,10 @@
 function runProgram(input) {
   input = input.trim().split(/[\n\r]+/);
-  let num = +input[0];
-  let elem = input[1].trim().split("");
-  //console.log(elem, num);
-  let stack = [];
-  for (let i = 0; i < num; i++) {
-    if (stack.length != 0 && stack[stack.length - 1] == elem[i]) {
-      stack.pop();
-    } else {
-      stack.push(elem[i]);
-    }
-  }
-  // console.log(stack)
-  if (stack.length != 0) {
-    console.log(stack.join(""));
-  } else {
-    console.log(-1);
-  }
+  console.log(input)
 }
 if (process.env.USERNAME === "lenovo") {
-  runProgram(`5
-aabbc`);
+  runProgram(`6 3
+2 3 3 3 6 9`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
