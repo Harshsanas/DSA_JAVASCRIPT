@@ -1,6 +1,21 @@
 function runProgram(input) {
   input = input.trim().split(/[\n\r]+/);
-  console.log(input)
+  // console.log(input)
+
+  var [num,K]=input[0].trim().split(" ").map(Number)
+  var elem=input[1].trim().split(" ").map(Number)
+
+  // console.log(num,K)
+  // console.log(elem)
+
+  var count=0
+
+  for(var i=0; i<elem.length; i++) {
+    if(elem[i]==K){
+      count++
+    }
+  }
+  console.log(count)
 }
 if (process.env.USERNAME === "lenovo") {
   runProgram(`6 3
