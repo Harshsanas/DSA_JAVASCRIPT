@@ -1,10 +1,10 @@
 function runProgram(input) {
   var input = input.trim().split(/[\n\r]+/);
   //   console.log(input);
-  tests = Number(input[0]);
-  //   console.log(tests);
+  test = Number(input[0]);
+  //   console.log(test);
 
-  for (var i = 0, line = 1; i < tests; i++) {
+  for (var i = 0, line = 1; i < test; i++) {
     var [num, sum] = input[line++].trim().split(" ").map(Number);
 
     var array = input[line++].trim().split(" ").map(Number);
