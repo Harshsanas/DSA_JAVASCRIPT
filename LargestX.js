@@ -1,29 +1,23 @@
 function runProgram(input) {
-  var [N,K] = input.trim().split(" ").map(Number);
-//   console.log(N,K);
+  var input = input.trim().split(/[\n\r]+/);
+  console.log(input);
 
-if (K == 1) {
-  for (var i = 1; i <= N; i++) {
-    console.log(i);
+  var test=+input[0]
+  console.log(test);
+
+  var count = 0
+  for(var K=0,line=1;K<test;K++){
+      var num=+input[line++]
+      var elem=input[line++].trim().split(" ").map(Number)
+      console.log(num,elem)
   }
-} else if (K == 2) {
-  for (var i = 1; i <= N; i++) {
-    for (var j = i + 1; j <= N; j++) {
-      console.log(i, j);
-    }
-  }
-} else if(K == 3) {
-  for (var i = 1; i <= N; i++) {
-    for (var j = i + 1; j <= N; j++) {
-      for(var k = j + 1; k <= N; k++) {
-      console.log(i, j, k);
-    }
-    }
-  }
-}
 }
 if (process.env.USERNAME === "lenovo") {
-  runProgram(`3 1`);
+  runProgram(`2
+5
+2 1 -1 -2 3
+5
+-3 2 -4 4 -2`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
