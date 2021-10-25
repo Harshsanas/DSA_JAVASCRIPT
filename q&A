@@ -1,0 +1,45 @@
+map- returns a new array, doesn't modify the original array.
+foreach- if we want to iterate through each element in array but dnt want to modify in original array. It also promotes chaining not return anything.
+filter- if condition is true it works
+reduce- if we want to reduce the array to a single output
+closures- is a js function which has a access to its outer enclosing function variable and properties as well as global variable.closures are used for data privacy.
+lexical scope- variable is defined outside a function can be accessible inside another function defined after that variable is declared.
+currying- currying is a technique of evaluating function with multiple argument into sequence of function with single argument.transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c)
+hoisting- the process in which the interpreter allocates memory for the variable and function declared prior to the execution of the code
+memoization-It is an optimization techniques used primarily to speed up computer programs by storing the results of expensive function calls and returning the cache result whenever the same output reoccur.
+event Loop- Call stack(every line of code)=> web API’s(async function)=>event queue(after timeout)=>event loop(put into the stack)
+ES6- let const keywords, arrow functions, templete literals, default parameters,object literals,promises, rest spread operators.
+arrow function- arrow function donot include any prototype property and cannot be used with the new keyword. adv- reduce code size,lexically bind the context,function braces and return statement is optional for single line statement.
+Objects- is an entity having state and behaviour basically key value pairs, it can be variable, array,f unction , object anything, Objects are mutable they are addressed by reference not by the value. there is reference in the heap memory which points towards the values for that particular object.
+Promises- promises are Js object which represents an eventual complition or failure of a asynchronous operation, it is a returned object where you attach callbacks, instead of passing callbacks into a function.callback takes 2 argu. resolve &reject.
+slice=return selcted item in an array,as a new array object, do'nt change original,takes2 arg.
+splice-returns removed item, changes the original,takes n number of arguments
+callback hell-due to complex nested callbacks each and every callback takes an argument that is result of previous callback.if there is error in 1 function then all functions gets affacted, escape- event queue and promises(returns object from any async function to which callback method can be added based on the previos function result)
+call= invokes a function,allows you to pass in argument one by one apply- allows to pass in argument as an array bind- returns a new function, allows you to pass any no. of arguments
+p1={firstname:"mahi"},function say(g){c.l(hello+ this.firstname),}var say1=say.bind(p1),
+constructor- used to create objects , if we need a blueprint for creating many objects of the same type. f person(first){this.firstname=first}, const myfather= new person("mm")
+prototypes= a reference to another object & contain common attributes/properties across all instances of the object. it is a method by which an object can inherit properties and methods of another objects.
+DOM- d.Obj m is an aplcatn programing interface for valid HTML and well formed XLM doc.
+capturing= captued by outer most element then propaged to inner element , bubling opp.
+modules- smal units of inde. reusebl code that is desird to be used as building block in creating js app
+pure functions- components which dnt rerenders when the value of props and states has been updated with same values.used to ensure unnecessary re-rendering of class components are avoided. spa- loads a single html page and all the necessary assets(js and css) reqd for app to run. it prevents page refresh every time a link is clicked
+HOC- function that takes a component and returns a new comp. small inputs we make we use reusable comp to make new comp for code reusing, state and props manupulation 
+Redux is an open-source JavaScript library used to manage application state. It allows React components to read data from a Redux Store, and dispatch Actions to the Store to update data. ... Redux helps apps to scale by providing a sensible way to manage state through a unidirectional data flow model.
+useContext= to prevent prop drilling
+useState- to matain state takes init state as an argu. &retns arr of 2 entites, initstate and fun
+useRef- to create directly reference to the DOM elements
+useEffect- works in all lifecycles if you need to do something after component render.comp needs to do something after render.
+non-semantic elements: <div> and <span> - Tells nothing about its content.
+semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+Attributes provide additional information about elements
+The href attribute of <a> specifies the URL of the page the link goes to.
+The src attribute of <img> specifies the path to the image to be displayed.
+The width and height attributes of <img> provide size information for images.
+Linked List- A linked list is a data structure that has sequence of nodes where every node is connected to the next node by means of a reference pointer.
+stack-Stack is a linear data structure that follows LIFO (Last In First Out) approach for accessing elements.Push, pop, and top (or peek) are the basic operations of a stack.
+queue- A queue is a linear data structure that follows the FIFO (First In First Out) approach for accessing elements.Dequeue from the queue, enqueue element to the queue, get front element of queue, and get rear element of queue are basic operations that can be performed.
+hashmap-Hashmap is a data structure that uses implementation of hash table data structure which allows access of data in constant time (O(1)) complexity if you have the key.
+express- express is a nodejs open source framework which is used for routing and writing middlewares for the web apps. 
+nodeJs- open source js runtime environment that runs on chrome V8 engine and executes Js code outside a web browser.
+A higher-order function is a function that accepts functions as parameters and/or returns a function.
+callback- is a function in a js which can be passed a an argument to other function and can be executed later

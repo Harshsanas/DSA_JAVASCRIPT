@@ -1,27 +1,31 @@
-//split(/[\r\n]+/)
-
 function runProgram(input) {
-  var input = input.trim().split("\n");
-  console.log(input);
+  input = input.trim().split(" ").map(Number);
+  
+  var m=input.length+1
+
+  var total = m * (m + 1) / 2;
+
+  var sum=0
+
+  for(var i=0; i<input.length; i++) {
+    sum+=input[i]
+  }
+  console.log(total-sum)
 }
 if (process.env.USERNAME === "lenovo") {
-  runProgram(`3 5
-1 2 3 4 5
-6 7 8 9 10
-11 12 13 14 15
-`);
+  runProgram(`4 5 1 3`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
-  let read = " ";
+  let read = "";
   process.stdin.on("data", function (input) {
     read += input;
   });
   process.stdin.on("end", function () {
     read = read.replace(/\n$/, "");
+    read = read.replace(/\n$/, "");
     runProgram(read);
   });
-
   process.on("SIGINT", function () {
     read = read.replace(/\n$/, "");
     runProgram(read);

@@ -1,30 +1,33 @@
-//split(/[\r\n]+/)
-
 function runProgram(input) {
-  var input = input.trim().split("\n");
-  for (var i = 0; i < input.length; i++) {
-    input[i] = input[i].trim().split(" ").map(Number);
-  }
-  console.log(input);
+  var input = +(input[0]);
+    // console.log(input);
+
+    if (input % 7 === 0) {
+      console.log("Masai School");
+    } else if (input % 5 === 0) {
+      console.log("School");
+    } else if(input % 5 === 0 && input % 7 === 0) {
+      console.log("Masai");
+    } else {
+      console.log("Hurray!");
+    }
+
 }
+
 if (process.env.USERNAME === "lenovo") {
-  runProgram(`3 5
-1 2 3 4 5
-6 7 8 9 10
-11 12 13 14 15
-`);
+  runProgram(`905`);
 } else {
   process.stdin.resume();
   process.stdin.setEncoding("ascii");
-  let read = " ";
+  let read = "";
   process.stdin.on("data", function (input) {
     read += input;
   });
   process.stdin.on("end", function () {
     read = read.replace(/\n$/, "");
+    read = read.replace(/\n$/, "");
     runProgram(read);
   });
-
   process.on("SIGINT", function () {
     read = read.replace(/\n$/, "");
     runProgram(read);
